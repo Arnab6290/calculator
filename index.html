@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SI calculator</title>
+	<link rel="stylesheet" href="si calc.css">
+</head>
+<body>
+	<table border="2" cellpadding="2" cellspacing="2" align="center" >
+		<tr><th colspan="2" id="sic">SIMPLE INTEREST CALCULATOR</th></tr>
+		<tr>
+			<th>Principal</th>
+			<td><input type="number" name="principal" id="p" required></td>
+		</tr>
+		<tr>
+			<th>Rate</th>
+			<td><input type="number" name="rate" id="r" required></td>
+		</tr>
+		<tr>
+			<th>Time</th>
+			<td><input type="text" name="rate" id="t" required></td>
+		</tr>
+		<td align="center" colspan="2"><div id="dis">
+		<input type="text" name="display"></div></td>
+		<tr><td colspan="2" align="center">
+			<input type="button" name="btn" id="btn" value="calculate" onclick="si()">
+		</td></tr>
+
+	</table>
+	<script>
+		function si(){
+			var p =parseInt(document.getElementById ("p").value);
+			var r =parseInt(document.getElementById ("r").value);
+			var t =parseInt(document.getElementById ("t").value);
+			var si=p*r/100*t;
+			document.getElementById ("dis").innerHTML=si;
+			
+		}
+		
+	</script>
+
+</body>
+</html>
